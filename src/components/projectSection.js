@@ -1,29 +1,32 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import {Parallax} from "react-scroll-parallax";
 
 const descriptionContent = (description, bgColor, alignRight) =>
-    <div style={{
-        textAlign: "left",
-        position: "relative",
-        alignItems: "center",
-        display: "flex",
-        color: bgColor === "white" ? "black" : "white",
-        width: "40%"
-    }}>
         <div style={{
-            position: "absolute",
-            right: 0,
-            padding: "40px",
-            // //transform: "translateY(30px)",
-            // //transform: `translateY(${scrollYProgress*200}px)`,
-            // translateY: yTransform,
-            marginLeft: alignRight ? '' : '-150px',
-            marginRight: alignRight ? '-150px' : '',
+            textAlign: "left",
+            position: "relative",
+            alignItems: "center",
+            display: "flex",
+            color: bgColor === "white" ? "black" : "white",
+            width: "40%"
         }}>
-            {description}
-        </div>
-    </div>;
+            <div style={{
+                position: "absolute",
+                right: 0,
+                padding: "40px",
+                // //transform: "translateY(30px)",
+                // //transform: `translateY(${scrollYProgress*200}px)`,
+                // translateY: yTransform,
+                marginLeft: alignRight ? '' : '-150px',
+                marginRight: alignRight ? '-150px' : '',
+            }}>    
+                <Parallax y={[-40, 40]}>
+                    {description}
+                </Parallax>
+            </div>
+        </div>;
 
 const ProjectSection = ({ imageUrl, title, description, alignRight, bgColor }) => {
 
@@ -34,9 +37,7 @@ const ProjectSection = ({ imageUrl, title, description, alignRight, bgColor }) =
         display: "flex",
         backgroundColor: bgColor,
     }}>
-        {/* <div 
-            style={{color: bgColor === "white" ? "black" : "white"}}
-        >{title}</div> */}
+
         <div style={{
             // center in the page
             alignItems: "center",
@@ -51,6 +52,9 @@ const ProjectSection = ({ imageUrl, title, description, alignRight, bgColor }) =
                 textDecoration: "none",
                 display: "block"
             }}>
+                <div 
+                    style={{color: bgColor === "white" ? "black" : "white"}}
+                >{title}</div>
                 <img alt={title} src={imageUrl} style={{
                     //width: "calc(100% * 0.7)",
                     boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
