@@ -1,3 +1,28 @@
+.thumbnail:hover {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.thumbnail_container .thumbnail_title {
+  font-family: 'Raisonne',Arial,sans-serif;
+  font-weight: 700;
+  font-size: 20pt;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.thumbnail_container:hover .thumbnail_title {
+  opacity: 1;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

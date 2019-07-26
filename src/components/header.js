@@ -1,35 +1,35 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
+const Header = () => {
+  // TODO: edit the description, animate on load
+  return (
+    <React.Fragment>
+      <div 
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        width: "100vw", 
+        borderBottom: "1px black",
+        borderBottomStyle: "solid",
+        display: "flex",
+        paddingLeft: "24px",
+        paddingRight: "24px",
+        paddingTop: "10px",
+        paddingBottom: "10px"
       }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+      >
+        <div style={{flex: "1"}}>Maya Koneval</div>
+        <div style={{
+          display: "flex",
+          paddingRight: "24px"
+          }}>
+          Resume
+        </div>
+        <div style={{display: "flex"}}>
+          About
+        </div>
+      </div>
+    </React.Fragment>
+)};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
