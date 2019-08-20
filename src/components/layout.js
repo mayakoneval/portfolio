@@ -6,8 +6,6 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
-
 import Header from "./header"
 import "./layout.css"
 import foamImage from '../images/thumbnails/foam.jpg';
@@ -60,17 +58,17 @@ const Layout = () => {
         <Header />
         {// need to vertical align the below div
         }
-        <div style={{margin: "auto", paddingBottom: "30px", maxWidth: "62vw", minWidth: "700px", maxHeight: "80vh"}}>
+        <div style={{margin: "auto", paddingBottom: "30px", maxWidth: `${36.6+45+9}vh`, minWidth: `${36.6+45+9}vh`, marginTop: "20px"}}>
           <div style={{
             display: "flex",
             flexFlow: "row wrap"
           }}>
-              <Thumbnail height={280} imageUrl={foamImage} title={"foam"} id="foam"/>
-              <Thumbnail height={280} imageUrl={kerfImage} title={"kerf"} id="kerf"/>
-              <Thumbnail height={280} imageUrl={driftImage} title={"drift"} id="drift"/>
-              <Thumbnail height={320} width={225} imageUrl={auxImage} title={"auxetic"} id="auxetics"/>
-              <Thumbnail height={320} width={291} imageUrl={inflateImage} title={"inflate"} id="inflate"/>
-              <Thumbnail height={320} imageUrl={ceramicsImage} title={"ceramic"} id="ceramic"/>
+              <Thumbnail height="36.6vh" imageUrl={foamImage} title={"foam"} id="foam"/>
+              <Thumbnail height="36.6vh" imageUrl={kerfImage} title={"kerf"} id="kerf"/>
+              <Thumbnail height="36.6vh" imageUrl={driftImage} title={"drift"} id="drift"/>
+              <Thumbnail height="45vh" imageUrl={auxImage} title={"auxetic"} id="auxetics"/>
+              <Thumbnail height="45vh" imageUrl={inflateImage} title={"inflate"} id="inflate"/>
+              <Thumbnail height="45vh" imageUrl={ceramicsImage} title={"ceramic"} id="ceramic"/>
           </div>
         </div>
       </div>
